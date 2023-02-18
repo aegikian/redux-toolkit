@@ -7,6 +7,30 @@
   pointer-events: none;
 }
 
+button {
+  width: 25vw;
+  height: 5vh;
+  background-color: #0aa7aa;
+  border-radius: 6px;
+  border: .5px solid;
+  transition: all 1s;
+}
+
+button:hover {
+  background-color: #06947c;
+  transform: scale(1.05);
+}
+
+.customers_map_div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1%;
+}
+
+.customer_name {
+  margin-right: -30%
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -32,6 +56,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
