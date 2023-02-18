@@ -2,6 +2,7 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCustomerAction, removeCustomerAction } from './store/customerReducer';
 import { fetchCustomers } from './asyncAction/customers';
+import { useEffect } from 'react';
 
 function App() {
   const dispatch = useDispatch()
@@ -11,6 +12,10 @@ function App() {
   const addCash = (sum) => {
     dispatch({ type: 'ADD_CASH', payload: sum })
   }
+
+  useEffect(() => {
+    dispatch(fetchCustomers());
+  }, []);
 
   const getCash = (sum) => {
     dispatch({ type: 'GET_CASH', payload: sum })

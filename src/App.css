@@ -28,8 +28,11 @@ button:hover {
 }
 
 .customer_name {
-  margin-right: -30%
+  text-align: left;
+  margin-left: 30vw;
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
