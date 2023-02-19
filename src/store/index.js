@@ -19,6 +19,6 @@ const rootReducer = combineReducers({
     users: userReducer,
 })
 
-export const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware, thunk)));
 
 sagaMiddleware.run(rootWatcher)

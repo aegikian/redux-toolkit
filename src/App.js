@@ -17,9 +17,9 @@ function App() {
     dispatch({ type: 'ADD_CASH', payload: sum })
   }
 
-  // useEffect(() => {
-  //   dispatch(fetchCustomers());
-  // }, []);
+  useEffect(() => {
+    dispatch(fetchCustomers());
+  }, []);
 
   const getCash = (sum) => {
     dispatch({ type: 'GET_CASH', payload: sum })
