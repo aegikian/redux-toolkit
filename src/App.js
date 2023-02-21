@@ -52,7 +52,7 @@ function App() {
           <div style={{ marginTop: '5%' }}>
             <h3>Список клиентов</h3>
             {customers.map(customer =>
-              <div className='customers_map_div'>
+              <div className='customers_map_div' key={customers.id}>
                 <h5 className='customer_name' key={customers.id} onClick={() => removeCustomer(customer)}>{customer.name}
                 </h5>
                 <button onClick={() => removeCustomer(customer)}>Удалить клиента</button>
